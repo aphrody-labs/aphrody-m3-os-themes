@@ -21,6 +21,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./cli": "./src/cli.ts",
+    "./chromium": "./src/chromium.ts",
     "./package.json": "./package.json"
   },
   "publishConfig": {
