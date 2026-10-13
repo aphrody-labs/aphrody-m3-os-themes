@@ -6,7 +6,6 @@ import { join } from "node:path";
 import { generate, nearestGnomeAccent, registryValues, themeManifest } from "../src/index.ts";
 import { installCommand, run } from "../src/cli.ts";
 import { encodePng } from "../src/png.ts";
-import { PET_COLORS } from "@aphrody/identity/pet";
 import { inflateSync } from "node:zlib";
 
 const input = { name: "Test", seed: "#6750a4", mode: "auto" as const };
@@ -44,7 +43,7 @@ describe("generate", () => {
       expect(run(["generate", "--target", "chromium", "--out", dir]).code).toBe(0);
       const actual = JSON.parse(readFileSync(join(dir, "chromium/dark/manifest.json"), "utf8"));
       expect(actual).toEqual(
-        themeManifest({ name: "Aphrody", seed: PET_COLORS.seed, mode: "auto" }, "dark"),
+        themeManifest({ name: "Aphrody", seed: "#6750a4", mode: "auto" }, "dark"),
       );
     } finally {
       rmSync(dir, { recursive: true, force: true });

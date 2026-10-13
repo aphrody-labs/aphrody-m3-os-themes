@@ -6,7 +6,6 @@
 // `generate` writes only into --out. `install`/`uninstall` are dry-run unless --apply (then they run the generated scripts).
 import { mkdirSync, writeFileSync, chmodSync, lstatSync, readFileSync } from "node:fs";
 import { dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
-import { PET_COLORS } from "@aphrody/identity/pet";
 import { nativeThemeVariant, parseNativeThemeExport } from "@aphrody/m3-tokens/native-theme";
 import { generate } from "./generate.ts";
 import { TARGETS, type ActiveMode, type GeneratedFile, type Target } from "./types.ts";
@@ -153,7 +152,7 @@ export function run(argv: string[], exec: Exec = defaultExec): CliResult {
     files = generate(
       {
         name: String(flags["name"] ?? "Aphrody"),
-        seed: String(flags["seed"] ?? nativeTheme?.seed ?? PET_COLORS.seed),
+        seed: String(flags["seed"] ?? nativeTheme?.seed ?? "#6750a4"),
         variant: (flags["variant"] ?? (nativeTheme && nativeThemeVariant(nativeTheme))) as never,
         contrastLevel:
           flags["contrast"] === undefined
