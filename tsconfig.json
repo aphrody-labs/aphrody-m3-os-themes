@@ -1,16 +1,5 @@
 {
   "extends": "@aphrody/m3-config/tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@aphrody/identity": ["C:/aphrody/m3/packages/identity/src/index.ts"],
-      "@aphrody/identity/*": ["C:/aphrody/m3/packages/identity/src/*"],
-      "@aphrody/m3-tokens": ["C:/aphrody/m3/packages/m3-tokens/src/theme-to-tokens.ts"],
-      "@aphrody/m3-tokens/*": ["C:/aphrody/m3/packages/m3-tokens/src/*"],
-      "@aphrody/web-source": ["C:/bun/packages/bun-aphrody-web/src/index.ts"],
-      "@aphrody/web-source/*": ["C:/bun/packages/bun-aphrody-web/*"]
-    }
-  },
   "include": ["src/**/*", "test/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
