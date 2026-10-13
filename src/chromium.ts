@@ -1,17 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 // Chromium-compatible browsers: Manifest V3 theme + BrowserThemeColor managed policy.
-import {
-  rgb,
-  rolesFor,
-  validate,
-} from "./color.ts";
+import { rgb, rolesFor, validate } from "./color.ts";
 import { gradientPng } from "./png.ts";
-import type {
-  GeneratedFile,
-  Mode,
-  Roles,
-  ThemeInput,
-} from "./types.ts";
+import type { GeneratedFile, Mode, Roles, ThemeInput } from "./types.ts";
 
 type Rgb = [number, number, number];
 
